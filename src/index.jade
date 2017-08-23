@@ -1,0 +1,83 @@
+doctype html
+html
+    head
+        title jTree
+        meta(charset="utf-8")
+        link(href="css/jTree.css" rel="stylesheet")
+        script(src="js/jquery.js")
+        script(src="js/jTree.js")
+
+        script.
+            $(document).ready(function(){
+                $('#jTree').jTree({
+                    data: [
+                        {
+                            text: 'Администрация',
+                            children: [
+                                {text: 'Бухгалтерия', children: ['Отдел 1', 'Отдел 2']},
+                                'Канцелярия',
+                                'Склад',
+                                'Рекламный отдел',
+                                'Кейтеринг',
+                                'Транспортный отдел',
+                                'Канцелярия'
+                            ]
+                        }
+                    ]
+                });
+            });
+    body
+        #jTree
+
+            ul.jTree-root
+                li.jTree-trunk Trunk
+                    ul
+                        li.jTree-leaf.jTree-azure Leaf 1
+                            ul
+                                li.jTree-leaf.jTree-azure Leaf 1a
+                                li.jTree-leaf.jTree-blue Leaf 1b
+                                    ul
+                                        li.jTree-leaf.jTree-blue Leaf 1aa
+                                            ul
+                                                li.jTree-leaf.jTree-blue Leaf 1aaa
+                                                li.jTree-leaf.jTree-blue Leaf 1aab
+                                        li.jTree-leaf.jTree-azure Leaf 1ab
+                        li.jTree-leaf.jTree-azure Leaf 2
+                            ul
+                                li.jTree-leaf.jTree-azure Leaf 2a
+                                li.jTree-leaf.jTree-azure Leaf 2b
+                                    ul
+                                        li.jTree-leaf.jTree-azure Leaf 2aa
+                                        li.jTree-leaf.jTree-azure Leaf 2ab
+                    ul
+                        li.jTree-branch.jTree-orange Branch 1
+                            ul
+                                li.jTree-leaf.jTree-azure Leaf 1
+                                    ul
+                                        li.jTree-leaf.jTree-azure Leaf 1
+                                li.jTree-leaf.jTree-azure Leaf 2
+                            ul
+                                li.jTree-branch.jTree-orange Branch 1a
+                                    ul
+                                        li.jTree-branch Branch 1aa
+                                        li.jTree-branch Branch 1ab
+                                        li.jTree-branch Branch 1ac
+                                li.jTree-branch Branch 1b
+                                li.jTree-branch.jTree-green Branch 1c
+                                    ul
+                                        li.jTree-branch.jTree-green Branch 1ca
+                                        li.jTree-branch.jTree-green Branch 1cb
+                                        li.jTree-branch.jTree-yellow Branch 1cc
+                                            ul
+                                                li.jTree-branch.jTree-yellow Branch 1cca
+                                                li.jTree-branch.jTree-yellow Branch 1ccb
+                                                li.jTree-branch.jTree-purple 1ccc
+                                                    ul
+                                                        li.jTree-branch.jTree-purple Branch 1cca
+                                                        li.jTree-branch.jTree-purple Branch 1ccb
+                                                        li.jTree-branch.jTree-purple Branch 1ccc
+                        li.jTree-branch Branch 2
+                            ul
+                                li.jTree-branch 2a
+                                li.jTree-branch Branch 2b
+                                li.jTree-branch Branch 2c
